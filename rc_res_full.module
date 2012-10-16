@@ -457,7 +457,7 @@ drupal_set_message(t("User ID: " . variable_get('working_uid') ));
   $url_stack = "http://lit321v-b.library.ucla.edu/rcres/reservation/release/" . "$working_rid";
   $url = $url_stack;
 
-krumo($url);
+//krumo($url);
 
   $response = drupal_http_request($url, array(
     'method' => 'DELETE',
@@ -465,7 +465,7 @@ krumo($url);
   )
   );
 
-krumo($response);
+//krumo($response);
 
 //  $reservation_status = $response_del->data;
 
@@ -843,7 +843,7 @@ $working_uid = variable_get('working_uid');
     'uid' => '502673598',
   );
 
-krumo($form_state);
+//krumo($form_state);
 
   $delimiter = ':::';
   $string = $form_state['page_values'][5]['table'];
@@ -893,7 +893,7 @@ krumo($form_state);
 //    'uid' => '603513612',
   );
 
-krumo($str_create1);
+//krumo($str_create1);
 
 
 
@@ -968,7 +968,7 @@ function rc_res_full_form_page_one_handler_submit($form, &$form_state) {
       // get user category here
 	$rc_res_full_get_user_category = rc_res_full_get_user_category($working_uid);
 	variable_set('rc_res_full_get_user_category', $rc_res_full_get_user_category);
-krumo($rc_res_full_get_user_category);
+//krumo($rc_res_full_get_user_category);
       $form_state['page_num'] = 2;
     }
   }
@@ -1096,7 +1096,7 @@ function rc_res_full_form_page_six_handler_submit($form, &$form_state) {
 
   $form_state['page_values'][6] = $form_state['values'];
 
-krumo($form_state);
+//krumo($form_state);
 
   if (!empty($form_state['page_values'][7])) {
     $form_state['values'] = $form_state['page_values'][7];
@@ -1545,8 +1545,8 @@ function rc_res_full_get_open_resources_at_time() {
 
   $response_voy = drupal_http_request($url, $options);
 
-krumo($url);
-krumo($response_voy);
+//krumo($url);
+//krumo($response_voy);
 
   $patron_reservations = $response_voy->data;
 
@@ -1619,7 +1619,7 @@ $request_retry = 3;
 // Send the request.
 $response_voy = drupal_http_request($request_url, $request_headers, $request_method, $data, $request_retry);
 
-krumo($response_voy);
+//krumo($response_voy);
 
   $patron_reservations = $response_voy->data;
   $patron_reservations_array = drupal_json_decode($patron_reservations, TRUE);
@@ -1633,8 +1633,8 @@ krumo($response_voy);
  */
 function rc_res_full_set_user_reservations($rrid, $str_create1) {
 
-krumo($str_create1);
-krumo($rrid);
+//krumo($str_create1);
+//krumo($rrid);
 
   $params = array();
   $params = json_encode($str_create1);
@@ -1650,7 +1650,7 @@ krumo($rrid);
 
 //  $response = drupal_http_request('http://lit321v-b.library.ucla.edu/rcres/reservation/reserveroom/1', $headers = array('Content-Type' => 'application/json'), $method = 'POST', $data = $params, $retry = 3);
 
-krumo($response);
+//krumo($response);
 
 }
 
@@ -1690,7 +1690,7 @@ function rc_res_full_set_user_reservations_0($working_uid) {
     'headers' => array('Content-Type' => 'application/json')
   ));
 
-krumo($response);
+//krumo($response);
 
 }
 // good 20120919
