@@ -640,7 +640,7 @@ drupal_set_message(t("User ID: " . variable_get('working_uid') ));
   $default_date_time = preg_replace( '/\d\d:\d\d:\d\d/', '08:00:00', $default_date_time );
 
   $form['date'] = array(
-    '#title' => t('Set Reservation Start Date and Time'),
+    '#title' => t('Set Reservation Start Date and Time1'),
     '#type' => 'date_popup', // Provided by the date_popup module
     '#default_value' => $default_date_time,
     '#date_format' => 'Y-m-d h:i A', // Uses the PHP date() format - http://php.net/manual/en/function.date.php
@@ -660,7 +660,7 @@ drupal_set_message(t("User ID: " . variable_get('working_uid') ));
 //  );
 
  $form['res_length'] = array(
-    '#title' => t('Set Reservation Start Date and Time'),
+    '#title' => t('Set Reservation Start Date and Time2'),
     '#type' => 'select',
     '#options' => array(
       60 => t('1 hour'),
