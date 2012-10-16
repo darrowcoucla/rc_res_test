@@ -1050,7 +1050,7 @@ function rc_res_full_form_page_four_handler_submit($form, &$form_state) {
   // to carry forward to subsequent pages in the form.
   // The Forms API rebuilds the form.
 
-krumo($form_state);
+//krumo($form_state);
 
   $form_state['page_values'][4] = $form_state['values'];
 
