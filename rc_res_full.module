@@ -1579,11 +1579,11 @@ function rc_res_full_get_resources_for_period($form, $form_state) {
   $rlength = $form_state['page_values'][4]['res_length'];
   $rlength =   $rlength/30;
 
-krumo($rdate);
-krumo($rtime12h);
-krumo($rtime12m);
-krumo($rtime12a);
-krumo($rlength);
+//krumo($rdate);
+//krumo($rtime12h);
+//krumo($rtime12m);
+//krumo($rtime12a);
+//krumo($rlength);
 
 $request_url = 'http://lit321v-b.library.ucla.edu/rcres/availablerooms/after/'."$rdate"."+"."$rtime12h".'%3a'."$rtime12m".'+'."$rtime12a".'/until/48/length/'."$rlength";
 //$request_url = 'http://lit321v-b.library.ucla.edu/rcres/availablerooms/after/2012-09-18+08%3a00+AM/until/48/length/3';
@@ -1594,7 +1594,7 @@ $request_retry = 3;
 // Send the request.
 $response_voy = drupal_http_request($request_url, $request_headers, $request_method, $data, $request_retry);
 
-krumo($response_voy);
+//krumo($response_voy);
 
   $patron_reservations = $response_voy->data;
   $patron_reservations_array = drupal_json_decode($patron_reservations, TRUE);
