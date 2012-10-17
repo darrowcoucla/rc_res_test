@@ -905,12 +905,18 @@ $working_uid = variable_get('working_uid');
 
   $form['description'] = array(
     '#type'  => 'item',
-    '#title' => t('test loop'),
+    '#title' => t('Success'),
   );
 
   $form['submit'] = array(
     '#type'  => 'submit',
-    '#value' => t('confirm'),
+    '#value' => t('Make another reservation'),
+    '#submit' => array('rc_res_full_form_page_seven_handler_submit'),
+  );
+
+  $form['view'] = array(
+    '#type'  => 'submit',
+    '#value' => t('View Reservation(s)'),
     '#submit' => array('rc_res_full_form_page_seven_handler_submit'),
   );
   return $form;
@@ -1119,9 +1125,11 @@ function rc_res_full_form_page_seven_handler_submit($form, &$form_state) {
 
   $form_state['page_values'][7] = $form_state['values'];
 
-
-  // loop to page 3 for testing
+if (preg_match("/View/", $form_state['clicked_button']['#value'])) {
   $form_state['page_num'] = 3;
+} else {
+  $form_state['page_num'] = 1;
+}
   $form_state['rebuild'] = TRUE;
  }
 
