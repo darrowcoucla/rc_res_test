@@ -956,7 +956,7 @@ function rc_res_full_form_page_one_handler_submit($form, &$form_state) {
 	  // get user category here
 	    $rc_res_full_get_user_category = rc_res_full_get_user_category($working_uid);
 	    variable_set('rc_res_full_get_user_category', $rc_res_full_get_user_category);
-	  $form_state['page_num'] = 2;
+	  $form_state['page_num'] = 3;
 	}
       }
     }
@@ -969,7 +969,7 @@ function rc_res_full_form_page_one_handler_submit($form, &$form_state) {
 	$rc_res_full_get_user_category = rc_res_full_get_user_category($working_uid);
 	variable_set('rc_res_full_get_user_category', $rc_res_full_get_user_category);
 //krumo($rc_res_full_get_user_category);
-      $form_state['page_num'] = 2;
+      $form_state['page_num'] = 3;
     }
   }
   else {
@@ -979,7 +979,7 @@ function rc_res_full_form_page_one_handler_submit($form, &$form_state) {
     // get user category here
       $rc_res_full_get_user_category = rc_res_full_get_user_category($working_uid);
       variable_set('rc_res_full_get_user_category', $rc_res_full_get_user_category);
-    $form_state['page_num'] = 2;
+    $form_state['page_num'] = 3;
   }
   $form_state['rebuild'] = TRUE;
 }
